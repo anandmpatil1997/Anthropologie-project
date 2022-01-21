@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+    <style>
+        .headsign {
+            border: 1px soild red;
+            width: 30%;
+            height: 70%;
+            margin: auto;
+
+        }
+
+        .emailsign {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            width: 450px;
+            text-align: center;
+
+
+        }
+
+        .passsign {
+            padding: 14px 22px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            width: 450px;
+            text-align: center;
+
+        }
+
+        .create {
+            text-align: center;
+        }
+
+        .butcreate {
+            margin-left: 20px;
+            padding: 15px;
+            width: 90%;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .butcreate:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .submitcl {
+            margin-left: 20px;
+            padding: 15px;
+            width: 90%;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submitcl:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headsign">
+        <h1 class="create">Sign In</h1>
+        <hr>
+
+        <form action="">
+            <label for="">Email</label><br>
+            <input class="emailsign" type=" text" placeholder="Enter Your Email"><br>
+
+            <label for="">Password</label><br>
+            <input class="passsign" type="password" id="pass" placeholder="Enter your password"><br>
+            <input class="showsign" type="checkbox" onclick="myFunction()">&nbsp;&nbsp;&nbsp;Show Password
+
+            <br>
+            <br>
+            <input class="submitcl" type="submit" value="SIGN IN">
+        </form>
+        <p style="text-align: center;"><u>forgot your password?</u></p>
+        <hr>
+        <h3 style="text-align: center;">SIGN UP</h3>
+        <p style="text-align: center;">Welcome! It's quick and easy to set up an account</p>
+        <br>
+        <a href="loginpage.html"><button class="butcreate">CREATE AN ACCOUNT</button></a>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", signin);
+    var reguser = JSON.parse(localStorage.getItem("userdatabase"));
+    function signin(event) {
+        event.preventDefault();
+        var email = document.querySelector(".emailsign").value;
+        var passwd = document.querySelector(".passsign").value;
+
+        for (var i = 0; i < reguser.length; i++) {
+            if (reguser[i].emailid == email && reguser[i].password == passwd) {
+                alert("Login Succesfull");
+                window.location.href = "homepage.html"
+            } else {
+                alert("Incorrect Username And Password");
+            }
+
+        }
+    }
+</script>

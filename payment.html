@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Address</title>
+    <link rel="stylesheet" href="payment.css">
+
+</head>
+
+<body>
+    <!-- <form id="main-box"> -->
+    <div id="head">
+        <img src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+            alt="logo" width="197" height="100px">
+        <span>
+            <p><a href="cart.html" style="color:rgb(233, 72, 120); text-decoration: none;">Cart</a> > Information >
+                Payment</p>
+        </span>
+    </div>
+    <h1 style="text-align: center;">Shipping Address</h1>
+    <div id="contact">
+        <p>Contact information</p>
+        <p style="">Already have an account? <a href="login.html" style="">log in</a>
+        </p>
+    </div>
+    <form id="myform">
+        <input type="text" placeholder="Email" id="mail"><br><br>
+        <input type="checkbox">
+        <label>Email me with news and offers</label><br><br><br>
+        <label>Shipping address</label><br>
+        <!-- <div id="address"> -->
+        <select id="country">
+            <option value="--">Country/region</option>
+            <option value="india">india</option>
+        </select>
+        <input type="text" id="fname" placeholder="First name">
+        <input type="text" id="lname" placeholder="Last name">
+        <input type="text" placeholder="Address" id="add">
+        <input type="text" placeholder="Apartment,suite,etc.(optional)" id="apart">
+        <input type="text" id="city" placeholder="City">
+        <select id="state">
+            <option value="--">state</option>
+            <option value="odisha">odisha</option>
+        </select>
+        <input type="number" id="pin" placeholder="PIN Code">
+        <input type="number" placeholder="Phone" id="phone"><br><br>
+        <!-- </div> -->
+
+        <input type="checkbox">
+        <label>Save this information for next time</label>
+        <div id="payment">
+            <p><a href="cart.html" style="text-decoration: none; color:rgb(199, 53, 78)"> Return to cart</a> </p>
+            <a href="order.html"><input type="submit" value="CONTINUE TO PAYMENT" id="btn"></a>
+        </div>
+    </form>
+</body>
+
+</html>
+<script src="payment.js"></script>

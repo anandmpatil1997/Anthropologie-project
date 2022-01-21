@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+
+    <style>
+        .head-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            align-items: center;
+            height: 65px;
+            padding: 0px 50px 0px 100px;
+
+        }
+
+        .search__input {
+            padding: 13px;
+            /* border-radius: 5px; */
+            border: 1ps solid;
+            width: 200px;
+
+        }
+
+        .btn {
+            padding: 12px;
+
+        }
+
+        .headmyaccount {
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            text-align: center;
+        }
+
+        .headmyaccount p {
+            padding: 0px 20px 0px 10px;
+
+        }
+
+        .headmyaccount i {
+            padding-top: 17px;
+        }
+
+        .headoffer {
+            background-color: #6aa8a5;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .headoffer p {
+
+            margin: 13px;
+            color: rgb(247, 247, 247);
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: rgb(209, 209, 209);
+
+            margin: 0px;
+        }
+
+        .menubar {
+            width: 100%;
+            height: 55px;
+            background-color: white
+        }
+
+        .menubar>ul {
+            background: white
+        }
+
+        .menubar ul {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            float: left;
+
+        }
+
+        .menubar ul a {
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+            padding: 0 20px;
+            display: block;
+        }
+
+        .menubar ul li {
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menubar ul li:hover {
+            background: rgb(201, 201, 201);
+        }
+
+        .menubar ul ul {
+            position: absolute;
+            background: white;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+
+        .menubar ul ul li {
+            float: none;
+            width: 300px;
+        }
+
+        .menubar ul li:hover>ul {
+            display: block;
+        }
+
+        .menubar ul li {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+
+        .menubar>ul {
+            padding-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headoffer">
+        <p style="font-style: italic; ">limited time</p>
+        <p>20% OFF SKINCARE AND WELLNESS</p>
+        <p>shop</p>
+        <p>details</p>
+    </div>
+    <div class="headmyaccount">
+        <i class="fa fa-language" aria-hidden="true"></i>
+        <a href="">
+            <p>English</p>
+        </a>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <a href="">
+            <p>My Account</p>
+        </a>
+    </div>
+    <div class="head-container">
+        <a href="#"><img
+                src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="" width="197" height="12"></a>
+
+        <div class="search__container">
+
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            <a href=""> <i class="fa fa-shopping-cart"
+                    style=" font-size: 27px; margin-left: 20px; cursor: pointer;color: black;"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="menubar">
+        <ul>
+            <li><a href="">New!</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="">Dresses</a>
+                <ul>
+                    <li><a href=""></a>Skirts</li>
+                    <li><a href=""></a>Sleepwear</li>
+                    <li><a href=""></a>Sweaters</li>
+                    <li><a href=""></a>Swimwear</li>
+                </ul>
+            </li>
+            <li><a href="">clothing</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Shoes</a>
+                <ul>
+                    <li><a href=""></a>Shop All Shoes</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="">Accessories</a>
+                <ul>
+                    <li><a href=""></a>Shop All Accesories</li>
+                    <li><a href=""></a>New1</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Bags & small Accesories</li>
+                </ul>
+            </li>
+            <li><a href="">Home & Furniture</a>
+                <ul>
+                    <li><a href=""></a>Skirts</li>
+                    <li><a href=""></a>Sleepwear</li>
+                    <li><a href=""></a>Sweaters/li>
+                    <li><a href=""></a>Swimwear</li>
+                </ul>
+            </li>
+            <li><a href="">Beauty & Wellness</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Garden & Outdoor</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="">Weddings</a>
+                <ul>
+                    <li><a href=""></a>Wedding kits</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="#">Gifts & Candles</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Sale</a></li>
+
+        </ul>
+    </div>
+    <hr>
+
+</body>
+
+</html>

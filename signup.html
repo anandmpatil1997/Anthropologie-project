@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signuppage</title>
+    <style>
+        .headsign {
+            border: 1px soild red;
+            width: 30%;
+            height: 70%;
+            margin: auto;
+
+        }
+
+
+
+        .emailsign {
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            width: 450px;
+            text-align: center;
+
+
+        }
+
+        .passsign {
+            padding: 14px 22px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            width: 450px;
+            text-align: center;
+
+        }
+
+        .create {
+            text-align: center;
+        }
+
+        .butcreate {
+            margin-left: 20px;
+            padding: 15px;
+            width: 90%;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .butcreate:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .submitcl {
+            margin-left: 20px;
+            padding: 15px;
+            width: 90%;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submitcl:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .alread {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headsign">
+        <h1 class="create">Create an Account</h1>
+        <hr>
+        <p>Welcome to Anthropologie! It's quick and easy to set up an account.</p>
+
+
+        <form action="">
+            <label for="">Email</label><br>
+            <input class="emailsign" type=" text" placeholder="Enter Your Email"><br>
+
+            <label for="">Password</label><br>
+            <input class="passsign" type="password" id="pass" placeholder="Enter your password"><br>
+            <input class="showsign" type="checkbox" onclick="myFunction()">&nbsp;&nbsp;&nbsp;Show Password
+
+            <br>
+            <input class="checkcheck" type="checkbox">&nbsp;&nbsp;&nbsp;Sign me up to receive Anthropologie offers,
+            promotions and other
+            commercial
+            messages. By
+            creating an account, I agree to Anthropologie's Terms of Service and Privacy Policy. I may unsubscribe at
+            any
+            time.
+
+            <p>By creating an account, you agree to Anthropologie's terms of use and privacy policy.
+
+            </p>
+            <input class="submitcl" type="submit" value="CREATE AN ACCOUNT">
+        </form>
+        <h1 class="alread">Already Have an Account?</h1>
+        <a href="loginpage.html"><button class="butcreate">SIGN IN</button></a>
+    </div>
+
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", formsubmit);
+    var userbag = [];
+    function formsubmit(event) {
+        event.preventDefault();
+        var email = document.querySelector(".emailsign").value;
+        var pass = document.querySelector(".passsign").value;
+        console.log(email, pass);
+        var userdata = {
+            emailid: email,
+            password: pass,
+        };
+        userbag.push(userdata)
+        // console.log(userbag);
+        localStorage.setItem("userdatabase", JSON.stringify(userbag));
+        alert("signup success");
+        window.location.href = "loginpage.html";
+    }
+    function myFunction() {
+        var x = document.getElementById("pass");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>

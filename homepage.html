@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Homepage</title>
+
+    <style>
+        .head-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            align-items: center;
+            height: 65px;
+            padding: 0px 50px 0px 100px;
+
+        }
+
+        .search__input {
+            padding: 13px;
+            /* border-radius: 5px; */
+            border: 1px solid;
+            width: 200px;
+
+        }
+
+        .btn {
+            padding: 12px;
+
+        }
+
+        .headmyaccount {
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            text-align: center;
+        }
+
+        .headmyaccount p {
+            padding: 0px 20px 0px 10px;
+
+        }
+
+        .headmyaccount i {
+            padding-top: 17px;
+        }
+
+        .headoffer {
+            background-color: #6aa8a5;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .headoffer p {
+
+            margin: 13px;
+            color: rgb(247, 247, 247);
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: rgb(209, 209, 209);
+
+            margin: 0px;
+        }
+
+        .menubar {
+            width: 100%;
+            height: 55px;
+            background-color: white
+        }
+
+        .menubar>ul {
+            background: white
+        }
+
+        .menubar ul {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            float: left;
+
+        }
+
+        .menubar ul a {
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+            padding: 0 20px;
+            display: block;
+        }
+
+        .menubar ul li {
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menubar ul li:hover {
+            background: rgb(201, 201, 201);
+        }
+
+        .menubar ul ul {
+            position: absolute;
+            background: white;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+
+        .menubar ul ul li {
+            float: none;
+            width: 300px;
+        }
+
+        .menubar ul li:hover>ul {
+            display: block;
+        }
+
+        .menubar ul li {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+
+        .menubar>ul {
+            padding-left: 70px;
+        }
+
+        /* Homepage  */
+        .offerad {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid red; */
+            margin-top: 40px;
+        }
+
+        .firstimgrow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 450px);
+            margin-top: 50px;
+            grid-gap: 20px;
+
+        }
+
+        .firstimgrow>div {
+            /* border: 1px solid red; */
+        }
+
+        .firstimgrowexpand {
+            grid-area: 1/1/3/3;
+        }
+
+        .secondimgrow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 450px);
+            margin-top: 50px;
+            grid-gap: 20px;
+
+        }
+
+        .secondimgrow>div {
+            /* border: 1px solid red; */
+        }
+
+        .secondimgrowexpand {
+            grid-area: 1/1/3/3;
+        }
+
+        .bigimg {
+
+            width: 100%;
+            height: 600px;
+            margin-top: 40px;
+
+        }
+
+        #maincard {
+            display: grid;
+            grid-template-columns: repeat(4, 320px);
+            grid-template-rows: 450px;
+            width: 100%;
+            justify-content: center;
+            grid-gap: 20px;
+            margin-top: 50px;
+
+        }
+
+
+
+
+        #mainp {
+            font-size: 15px;
+            color: #000000;
+            font-family: "Neutraface Display Titling";
+            margin-left: 5px;
+        }
+
+        .ptext {
+            margin-left: 5px;
+        }
+
+        .ptext1 {
+            color: #a8a5a5;
+            margin-left: 5px;
+            font-family: "Quicksand";
+        }
+
+        .card {
+            position: relative;
+            display: inline-block;
+            height: 550px;
+            width: 250px;
+
+
+        }
+
+        .card .imgtop {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        .card:hover .imgtop {
+            display: inline;
+        }
+
+        .colorcard {
+            display: flex;
+        }
+
+        /* footer */
+        .foothead {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .foothead>div {
+            width: 40%;
+
+            height: 100px;
+        }
+
+        .footinput {
+            padding: 12px;
+            width: 400px;
+            margin-top: 10px;
+        }
+
+        .footbut {
+            margin-left: 20px;
+            width: 140px;
+            padding: 12px;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footbut:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .mainfooter {
+            background-color: #f0f0f0;
+        }
+
+        .footgrid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 300px);
+            grid-template-rows: 300px;
+            justify-content: center;
+        }
+
+        .footgrid>div {
+            /* border: 1px solid red; */
+        }
+
+        .footgrid a {
+            text-decoration: none;
+            font-size: 17px;
+            color: black;
+        }
+
+        .footgrid>div>div {
+            margin-top: 15px;
+        }
+
+        .iOG {
+            display: flex;
+            justify-content: center;
+        }
+
+        .google {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .google>div {
+            margin: 0px 0px 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headoffer">
+        <p style="font-style: italic; ">limited time</p>
+        <p>20% OFF SKINCARE AND WELLNESS</p>
+        <p>shop</p>
+        <p>details</p>
+    </div>
+    <div class="headmyaccount">
+        <i class="fa fa-language" aria-hidden="true"></i>
+        <a href="">
+            <p>English</p>
+        </a>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <a href="">
+            <p>My Account</p>
+        </a>
+    </div>
+    <div class="head-container">
+        <a href="homepage.html"><img
+                src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="" width="197" height="12"></a>
+
+        <div class="search__container">
+
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            <a href=""> <i class="fa fa-shopping-cart"
+                    style=" font-size: 27px; margin-left: 20px; cursor: pointer;color: black;"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="menubar">
+        <ul>
+            <li><a href="productpage.html">New!</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Dresses</a>
+                <ul>
+                    <li><a href="">Skirts</a></li>
+                    <li><a href="">Sleepwear</a></li>
+                    <li><a href="">Sweaters</a></li>
+                    <li><a href="">Swimwear</a></li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">clothing</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Shoes</a>
+                <ul>
+                    <li><a href=""></a>Shop All Shoes</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Accessories</a>
+                <ul>
+                    <li><a href=""></a>Shop All Accesories</li>
+                    <li><a href=""></a>New1</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Bags & small Accesories</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Home & Furniture</a>
+                <ul>
+                    <li><a href=""></a>Skirts</li>
+                    <li><a href=""></a>Sleepwear</li>
+                    <li><a href=""></a>Sweaters/li>
+                    <li><a href=""></a>Swimwear</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Beauty & Wellness</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Garden & Outdoor</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Weddings</a>
+                <ul>
+                    <li><a href=""></a>Wedding kits</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="productpage.html">Gifts & Candles</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Sale</a></li>
+
+        </ul>
+    </div>
+    <hr>
+
+    <!-- homepage -->
+    <div class="offerad">
+        <a href="productpage.html"><img
+                src="https://images.ctfassets.net/5de70he6op10/4huKtnxfe8oMs0FQuaZl9Z/38559aedbc053545c9dd8223745e8711/011622_70offSOS_HPG_SecondaryBanner_LS_02.jpg?w=2882&q=80&fm=webp"
+                alt="" height="80px" width="100%"></a>
+    </div>
+    <div class="firstimgrow">
+        <div class="firstimgrowexpand">
+            <a href="productpage.html"><img
+                    src="https://images.ctfassets.net/5de70he6op10/1AQPq68RkfiEkolMemOZGl/ac39dbe418b9fbd4c4e07a3c7079a854/011822_HPG_LS_M1.jpg?w=1756&q=80&fm=webp"
+                    alt="" width="740px" height="920px"></a>
+
+        </div>
+        <div>
+            <a href="productpage.html"><img
+                    src="https://images.ctfassets.net/5de70he6op10/3gM9ZctTUmo5cm5Q5Micvh/a6b762b09fe5b844e812feb6fdead753/RR_Jeans.jpg?w=856&q=80&fm=webp"
+                    alt="" width="360px" height="450px"></a>
+        </div>
+        <div>
+            <a href="productpage.html"><img
+                    src="https://images.ctfassets.net/5de70he6op10/3goHPPrmEEH0NciyEmLOql/e07b8678e0771ada9e489dae95e72221/2UP_Tops.jpg?w=856&q=80&fm=webp"
+                    alt="" width="360px" height="450px"></a>
+        </div>
+        <div>
+            <a href="productpage.html"><img
+                    src="https://images.ctfassets.net/5de70he6op10/6gwvAXr34LFBZjof1nXj0x/1d49e0c3457f06cf4bf44884591d160e/2UP_Dresses.jpg?w=856&q=80&fm=webp"
+                    alt="" width="360px" height="450px"></a>
+        </div>
+        <div>
+            <a href="productpage.html"><img
+                    src="https://images.ctfassets.net/5de70he6op10/7am7HguIqz1FrHAgXEkZIy/91e6bc8e79468871726dc036e1b6e784/RR_Candles.jpg?w=856&q=80&fm=webp"
+                    alt="" width="360px" height="450px"></a>
+        </div>
+
+
+    </div>
+    <div class="secondimgrow">
+        <div class="secondimgrowexpand">
+            <img src="https://images.ctfassets.net/5de70he6op10/bVMKxV2lmKjrj8DQCe1er/b0613e3704197991657e3f377f210d84/011822_HPG_LS_M3.jpg?w=1756&q=80&fm=webp"
+                alt="" width="740px" height="920px">
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/45IlwZxQuRHDpm9XJ4oUqy/c6911537f01b1e84f762bbafc7a6725f/RR_Jewelry.jpg?w=856&q=80&fm=webp"
+                alt="" width="360px" height="450px">>
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/7tUuflSMHynYIj6RSeCwFs/5f34c037b8f2a7f1efed8c668796d627/RR_Swimwear.jpg?w=856&q=80&fm=webp"
+                alt="" width="360px" height="450px">
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/2okLU1SjrtIvlfWavmrrMD/60900e361aec72c562ec3ba99ba2c35b/RR_Furniture.jpg?w=856&q=80&fm=webp"
+                alt="" width="360px" height="450px">
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/1wWPItfsGGX5yMWfL6GAwf/6766c5205e8a788fdd4238a05b877245/2UP_NewAccessories.jpg?w=856&q=80&fm=webp"
+                alt="" width="360px" height="450px">
+        </div>
+
+    </div>
+    <div class="bigimg">
+        <img src="https://images.ctfassets.net/5de70he6op10/6qkWAbvxpjWTNCoJNBnolo/a17bb3f77cb92071b0dd0d3df07414c7/011922_HPG_Update_LS_M4.jpg?w=2694&q=80&fm=webp"
+            alt="" width="100%" height="600px">
+        <p style="margin-left: 30px;">Sweet (next-to-)nothings, in satin and lace.</p>
+        <u style="margin-left: 30px;">Shop Intimates</u>
+
+    </div>
+    <div style="margin-top: 100px;">
+        <h2 style="margin-left: 30px;">You May Also Like</h2>
+        <hr>
+    </div>
+    <div>
+
+    </div>
+    <div id="maincard">
+        <a style="color: black;" href="productpage.html">
+            <div class="card">
+                <img id="imgmouseover" onmouseover="setnewimage()" onmouseout="setoldimage()"
+                    src="https://images.urbndata.com/is/image/Anthropologie/4110084320152_011_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    alt="" width="270px" height="350px">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/4110084320152_011_b3?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    class="imgtop" alt="" width="270px" height="350px">
+                <p id="mainp">Maeve Slim Buttondown</p>
+
+
+
+            </div>
+        </a>
+
+        <a style="color: black;" href="productpage.html">
+            <div class="card">
+                <img id="imgmouseover" onmouseover="setnewimage()" onmouseout="setoldimage()"
+                    src="https://images.urbndata.com/is/image/Anthropologie/64071558_436_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    alt="" width="270px" height="350px">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/63446256_023_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    class="imgtop" alt="" width="270px" height="350px">
+                <p id="mainp">Capri Blue Volcano Matte Jar Candle</p>
+
+
+            </div>
+        </a>
+        <a style="color: black;" href="productpage.html">
+            <div class="card">
+                <img id="imgmouseover" onmouseover="setnewimage()" onmouseout="setoldimage()"
+                    src="https://images.urbndata.com/is/image/Anthropologie/4130464030102_069_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    alt="" width="270px" height="350px">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/4130464030102_069_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    class="imgtop" alt="" width="270px" height="350px">
+                <p id="mainp">Bow-Tie Maxi Dress</p>
+
+            </div>
+        </a>
+        <a style="color: black;" href="productpage.html">
+            <div class="card">
+                <img id="imgmouseover" onmouseover="setnewimage()" onmouseout="setoldimage()"
+                    src="https://images.urbndata.com/is/image/Anthropologie/23551781_001_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    alt="" width="240px" height="350px">
+                <img src="https://images.urbndata.com/is/image/Anthropologie/65347015_102_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+                    class="imgtop" alt="" width="240px" height="350px">
+                <p id="mainp">Moglea Playing Cards, Set of 2</p>
+
+
+            </div>
+        </a>
+    </div>
+    <hr>
+    <h3 style="margin-left: 30px;">About Us</h3>
+    <p style="margin-left: 30px;">Our mission at Anthropologie has always been to surprise and delight you with
+        unexpected, distinctive finds for
+        your closet and home. We source and craft all of our products with care, ensuring that any treasure you find at
+        Anthropologie is unique, just like you. Explore our dress shop to find styles and fits perfect for any occasi...
+    </p>
+    <!-- footer -->
+    <div class="mainfooter">
+        <div class="foothead">
+            <div>
+                <h3>Sign Up For Anthropologie Emails</h3>
+                <p>Receive early access to new arrivals, sales, exclusive content, events and much more!</p>
+            </div>
+            <div>
+                <label for="">Email Address:</label><br>
+                <input class="footinput" type="text">
+                <input class="footbut" type="submit">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="footgrid">
+            <div>
+                <h5>INFORMATION</h5>
+                <div><a href="">Contact Us</a></div>
+                <div><a href="">Store Locator</a></div>
+                <div><a href="">Terms&Conditions</a></div>
+                <div><a href="">Returns</a></div>
+                <div><a href="">FAQ's</a></div>
+                <div><a href="">About Us</a></div>
+            </div>
+            <div>
+                <h5>SERVICES</h5>
+                <div><a href="">Anthro Perks</a></div>
+                <div><a href="">Gift Cards</a></div>
+                <div><a href="">Trade Membership</a></div>
+                <div><a href="">Furniture</a></div>
+                <div><a href="">Store Pickup And Collection </a></div>
+
+            </div>
+            <div>
+                <h5>About US</h5>
+                <div><a href="">Our story</a></div>
+                <div><a href="">Events</a></div>
+                <div><a href="">A Greater Food</a></div>
+                <div><a href="">Diversity & Inclusion</a></div>
+
+            </div>
+            <div>
+                <h5>CONNECT</h5>
+                <div><a href="">Stay Connected</a></div>
+                <div><a href="">Carrers</a></div>
+                <div><a href="">Styling Services</a></div>
+                <div><a href="">Request A Catalaog</a></div>
+
+            </div>
+        </div>
+        <div class="google">
+            <div>
+                <img width="50px" height=30px
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                    alt="Google_Play_Store_badge_EN" />
+            </div>
+            <div>
+                <img width=50px height=30px
+                    src="https://cdn.shopify.com/s/files/1/0906/2558/files/apple-store.png?v=1580269780" alt="IOS" />
+            </div>
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/2DRgCRXNIEkk0wIqUo2ywa/20ea44a95fb361eaf034b42eec179d44/_site_footer__download_app_enable_push_.jpg"
+                alt="" width="100%" height="80px">
+        </div>
+        <hr>
+        <div>
+            <P style="font-size: 12px;text-align: center;">US &nbsp;|&nbsp;FRANCE &nbsp;|&nbsp;GERMANY&nbsp;|&nbsp; UK
+            </P>
+        </div>
+    </div>
+</body>
+
+</html>

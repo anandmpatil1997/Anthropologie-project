@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .foothead {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .foothead>div {
+            width: 40%;
+
+            height: 100px;
+        }
+
+        .footinput {
+            padding: 12px;
+            width: 400px;
+            margin-top: 10px;
+        }
+
+        .footbut {
+            margin-left: 20px;
+            width: 140px;
+            padding: 12px;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footbut:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .mainfooter {
+            background-color: #f0f0f0;
+        }
+
+        .footgrid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 300px);
+            grid-template-rows: 300px;
+            justify-content: center;
+        }
+
+        .footgrid>div {
+            /* border: 1px solid red; */
+        }
+
+        .footgrid a {
+            text-decoration: none;
+            font-size: 17px;
+            color: black;
+        }
+
+        .footgrid>div>div {
+            margin-top: 15px;
+        }
+
+        .iOG {
+            display: flex;
+            justify-content: center;
+        }
+
+        .google {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .google>div {
+            margin: 0px 0px 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainfooter">
+        <div class="foothead">
+            <div>
+                <h3>Sign Up For Anthropologie Emails</h3>
+                <p>Receive early access to new arrivals, sales, exclusive content, events and much more!</p>
+            </div>
+            <div>
+                <label for="" style="margin-top: 10px;">Email Address:</label><br>
+                <input class="footinput" type="text">
+                <button class="footbut">SUBMIT</button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="footgrid">
+            <div>
+                <h5>INFORMATION</h5>
+                <div><a href="">Contact Us</a></div>
+                <div><a href="">Store Locator</a></div>
+                <div><a href="">Terms&Conditions</a></div>
+                <div><a href="">Returns</a></div>
+                <div><a href="">FAQ's</a></div>
+                <div><a href="">About Us</a></div>
+            </div>
+            <div>
+                <h5>SERVICES</h5>
+                <div><a href="">Anthro Perks</a></div>
+                <div><a href="">Gift Cards</a></div>
+                <div><a href="">Trade Membership</a></div>
+                <div><a href="">Furniture</a></div>
+                <div><a href="">Store Pickup And Collection </a></div>
+
+            </div>
+            <div>
+                <h5>About US</h5>
+                <div><a href="">Our story</a></div>
+                <div><a href="">Events</a></div>
+                <div><a href="">A Greater Food</a></div>
+                <div><a href="">Diversity & Inclusion</a></div>
+
+            </div>
+            <div>
+                <h5>CONNECT</h5>
+                <div><a href="">Stay Connected</a></div>
+                <div><a href="">Carrers</a></div>
+                <div><a href="">Styling Services</a></div>
+                <div><a href="">Request A Catalaog</a></div>
+
+            </div>
+        </div>
+        <div class="google">
+            <div>
+                <img width="50px" height=30px
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                    alt="Google_Play_Store_badge_EN" />
+            </div>
+            <div>
+                <img width=50px height=30px
+                    src="https://cdn.shopify.com/s/files/1/0906/2558/files/apple-store.png?v=1580269780" alt="IOS" />
+            </div>
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/2DRgCRXNIEkk0wIqUo2ywa/20ea44a95fb361eaf034b42eec179d44/_site_footer__download_app_enable_push_.jpg"
+                alt="" width="100%" height="80px">
+        </div>
+        <hr>
+        <div>
+            <P style="font-size: 12px;text-align: center;">US &nbsp;|&nbsp;FRANCE &nbsp;|&nbsp;GERMANY&nbsp;|&nbsp; UK
+            </P>
+        </div>
+    </div>
+</body>
+
+</html>

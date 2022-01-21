@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .head-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            align-items: center;
+            height: 65px;
+            padding: 0px 50px 0px 100px;
+
+        }
+
+        .search__input {
+            padding: 13px;
+            /* border-radius: 5px; */
+            border: 1ps solid;
+            width: 200px;
+
+        }
+
+        .btn {
+            padding: 12px;
+
+        }
+
+        .headmyaccount {
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            text-align: center;
+        }
+
+        .headmyaccount p {
+            padding: 0px 20px 0px 10px;
+
+        }
+
+        .headmyaccount i {
+            padding-top: 17px;
+        }
+
+        .headoffer {
+            background-color: #6aa8a5;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        .headoffer p {
+
+            margin: 13px;
+            color: rgb(247, 247, 247);
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: rgb(209, 209, 209);
+
+            margin: 0px;
+        }
+
+        .menubar {
+            width: 100%;
+            height: 55px;
+            background-color: white;
+
+        }
+
+        .menubar>ul {
+            background: white
+        }
+
+        .menubar ul {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            float: left;
+
+        }
+
+        .menubar ul a {
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+            padding: 0 20px;
+            display: block;
+        }
+
+        .menubar ul li {
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menubar ul li:hover {
+            background: rgb(201, 201, 201);
+        }
+
+        .menubar ul ul {
+            position: absolute;
+            background: white;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+
+        .menubar ul ul li {
+            float: none;
+            width: 300px;
+        }
+
+        .menubar ul li:hover>ul {
+            display: block;
+        }
+
+        .menubar ul li {
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+
+        .menubar>ul {
+            padding-left: 70px;
+        }
+
+        #cart-container {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+
+        #cart-container #product-container,
+        #check-box-container {
+            margin: 10px;
+            padding: 0 5px;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #product-container {
+            width: 50%;
+        }
+
+        #check-box-container {
+            width: 20%;
+        }
+
+        #flex-1 {
+            display: flex;
+        }
+
+        #flex-1>div {
+            width: 200px;
+            border: 1px solid teal;
+            /* margin:10px; */
+        }
+
+        #flex-2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .quantity {
+            text-align: center;
+        }
+
+        select {
+            margin-top: 10%;
+        }
+
+        .div-2>p {
+            margin-left: 5px;
+
+        }
+
+        .inner-content,
+        .inner-content-2,
+        .inner-content-3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* button,.check-out-box,#checkout{
+            border:1px solid red;
+            text-align: center;
+        }  */
+        .check-out-box {
+            width: 50%;
+            margin: auto;
+        }
+
+        .btin [type='submit'] {
+            padding: 10px;
+            border: 0px;
+            text-align: center;
+            width: 40%;
+
+            background-color: #4b5666;
+            color: white;
+        }
+
+        .btin:hover[type='submit'] {
+            background-color: white;
+            color: black;
+        }
+
+        input[type='text'] {
+            margin-left: -4px;
+        }
+
+        #checkout>input {
+            padding: 10px;
+            width: 290px;
+
+        }
+
+        #cartimg {
+            width: 120px;
+            height: 120px;
+        }
+
+        #deletebut {
+            width: 100px;
+            background-color: teal;
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+            cursor: pointer;
+
+        }
+
+        #deletebut:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .foothead {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-top: 20px;
+            margin-top: 100px;
+        }
+
+        .foothead>div {
+            width: 40%;
+
+            height: 100px;
+        }
+
+        .footinput {
+            padding: 12px;
+            width: 400px;
+            margin-top: 10px;
+        }
+
+        .footbut {
+            margin-left: 20px;
+            width: 140px;
+            padding: 12px;
+            background-color: #4b5666;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footbut:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .mainfooter {
+            background-color: #f0f0f0;
+        }
+
+        .footgrid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 300px);
+            grid-template-rows: 300px;
+            justify-content: center;
+        }
+
+        .footgrid>div {
+            /* border: 1px solid red; */
+        }
+
+        .footgrid a {
+            text-decoration: none;
+            font-size: 17px;
+            color: black;
+        }
+
+        .footgrid>div>div {
+            margin-top: 15px;
+        }
+
+        .iOG {
+            display: flex;
+            justify-content: center;
+        }
+
+        .google {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .google>div {
+            margin: 0px 0px 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headoffer">
+        <p style="font-style: italic; ">limited time</p>
+        <p>20% OFF SKINCARE AND WELLNESS</p>
+        <p>shop</p>
+        <p>details</p>
+    </div>
+    <div class="headmyaccount">
+        <i class="fa fa-language" aria-hidden="true"></i>
+        <a href="">
+            <p>English</p>
+        </a>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <a href="">
+            <p>My Account</p>
+        </a>
+    </div>
+    <div class="head-container">
+        <a href="#"><img
+                src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"
+                alt="" width="197" height="12"></a>
+
+        <div class="search__container">
+
+            <input class="search__input" type="text" placeholder="Search">
+            <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+            <a href=""> <i class="fa fa-shopping-cart"
+                    style=" font-size: 27px; margin-left: 20px; cursor: pointer;color: black;"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="menubar">
+        <ul>
+            <li><a href="">New!</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="">Dresses</a>
+                <ul>
+                    <li><a href=""></a>Skirts</li>
+                    <li><a href=""></a>Sleepwear</li>
+                    <li><a href=""></a>Sweaters</li>
+                    <li><a href=""></a>Swimwear</li>
+                </ul>
+            </li>
+            <li><a href="">clothing</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Shoes</a>
+                <ul>
+                    <li><a href=""></a>Shop All Shoes</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="">Accessories</a>
+                <ul>
+                    <li><a href=""></a>Shop All Accesories</li>
+                    <li><a href=""></a>New1</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Bags & small Accesories</li>
+                </ul>
+            </li>
+            <li><a href="">Home & Furniture</a>
+                <ul>
+                    <li><a href=""></a>Skirts</li>
+                    <li><a href=""></a>Sleepwear</li>
+                    <li><a href=""></a>Sweaters/li>
+                    <li><a href=""></a>Swimwear</li>
+                </ul>
+            </li>
+            <li><a href="">Beauty & Wellness</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Garden & Outdoor</a>
+                <ul>
+                    <li><a href=""></a>The valentines day shop</li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Beauty & Wellness</a></li>
+                    <li><a href="">Clothing</a></li>
+                    <li><a href="">Dresses</a></li>
+                </ul>
+            </li>
+            <li><a href="">Weddings</a>
+                <ul>
+                    <li><a href=""></a>Wedding kits</li>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Boots & Booties</li>
+                    <li><a href=""></a>Flats</li>
+                </ul>
+            </li>
+            <li><a href="#">Gifts & Candles</a>
+                <ul>
+                    <li><a href=""></a>New!</li>
+                    <li><a href=""></a>Top Rated</li>
+                    <li><a href=""></a>Activewear</li>
+                    <li><a href=""></a>Jackets & Coats</li>
+                </ul>
+            </li>
+            <li><a href="">Sale</a></li>
+
+        </ul>
+    </div>
+    <hr>
+    <div id='cart-container'>
+        <div id="product-container">
+            <!-- <div>
+                <select id='quantity'>
+                    <option>Q</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div> -->
+        </div>
+        <div id='check-box-container'>
+            <form>
+                <button class="btin">
+                    <i></i>
+                    <span>APPLY PROMO</span>
+                    <br>
+                </button>
+                <input class="btin" type='text' placeholder='Enter promo code'>
+                <br>
+                <br>
+                <div class="check-out-box">
+                    <div class="title">OVERVIEW</div>
+                    <div class='check-out-box-content'>
+                        <div class='inner-content'>
+                            <p>Subtotal</p>
+                            <span>
+                                <p>Rs.3,390</p>
+                            </span>
+                        </div>
+                        <div class='inner-content-2'>
+                            <p>Discount</p>
+                            <span>
+                                <p>- Rs.295</p>
+                            </span>
+                        </div>
+                        <hr>
+                        <div class='inner-content-3'>
+                            <p>Total</p>
+                            <span>
+                                <p>Rs. 3,095</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div>
+                    <input style="" type='text' value='SHOPMORE' />
+                </div>
+            </form>
+            <a href="payment.html"><button
+                    style="padding: 11px;width: 200px; background-color: teal; color: white;margin-top: 30px;border: none; cursor: pointer;">CHECKOUT</button></a>
+        </div>
+    </div>
+    <div class="mainfooter">
+        <div class="foothead">
+            <div>
+                <h3>Sign Up For Anthropologie Emails</h3>
+                <p>Receive early access to new arrivals, sales, exclusive content, events and much more!</p>
+            </div>
+            <div>
+                <label for="" style="margin-top: 10px;">Email Address:</label><br>
+                <input class="footinput" type="text">
+                <button class="footbut">SUBMIT</button>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="footgrid">
+            <div>
+                <h5>INFORMATION</h5>
+                <div><a href="">Contact Us</a></div>
+                <div><a href="">Store Locator</a></div>
+                <div><a href="">Terms&Conditions</a></div>
+                <div><a href="">Returns</a></div>
+                <div><a href="">FAQ's</a></div>
+                <div><a href="">About Us</a></div>
+            </div>
+            <div>
+                <h5>SERVICES</h5>
+                <div><a href="">Anthro Perks</a></div>
+                <div><a href="">Gift Cards</a></div>
+                <div><a href="">Trade Membership</a></div>
+                <div><a href="">Furniture</a></div>
+                <div><a href="">Store Pickup And Collection </a></div>
+
+            </div>
+            <div>
+                <h5>About US</h5>
+                <div><a href="">Our story</a></div>
+                <div><a href="">Events</a></div>
+                <div><a href="">A Greater Food</a></div>
+                <div><a href="">Diversity & Inclusion</a></div>
+
+            </div>
+            <div>
+                <h5>CONNECT</h5>
+                <div><a href="">Stay Connected</a></div>
+                <div><a href="">Carrers</a></div>
+                <div><a href="">Styling Services</a></div>
+                <div><a href="">Request A Catalaog</a></div>
+
+            </div>
+        </div>
+        <div class="google">
+            <div>
+                <img width="50px" height=30px
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                    alt="Google_Play_Store_badge_EN" />
+            </div>
+            <div>
+                <img width=50px height=30px
+                    src="https://cdn.shopify.com/s/files/1/0906/2558/files/apple-store.png?v=1580269780" alt="IOS" />
+            </div>
+        </div>
+        <div>
+            <img src="https://images.ctfassets.net/5de70he6op10/2DRgCRXNIEkk0wIqUo2ywa/20ea44a95fb361eaf034b42eec179d44/_site_footer__download_app_enable_push_.jpg"
+                alt="" width="100%" height="80px">
+        </div>
+        <hr>
+        <div>
+            <P style="font-size: 12px;text-align: center;">US &nbsp;|&nbsp;FRANCE &nbsp;|&nbsp;GERMANY&nbsp;|&nbsp; UK
+            </P>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var prodData = JSON.parse(localStorage.getItem("cartitems"));
+
+    prodData.map(function (data) {
+
+        var div = document.createElement("div");
+        div.setAttribute("id", "flex-1");
+
+        var div1 = document.createElement("div");
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("class", "div-2");
+
+        var div3 = document.createElement("div");
+        div3.setAttribute("id", "flex-2")
+
+        var div4 = document.createElement("div");
+        div4.setAttribute("class", "quantity")
+
+        var image = document.createElement("img");
+        image.setAttribute("src", data.imgUrl);
+        image.setAttribute("id", "cartimg")
+
+
+        var name = document.createElement("p");
+        name.textContent = data.name;
+
+
+
+        var quanty = document.createElement("button");
+        quanty.textContent = "Remove from cart"
+        quanty.setAttribute("id", "deletebut")
+        quanty.addEventListener("click", function () {
+            deleteTask(index)
+        })
+
+
+
+        var price = document.createElement("p");
+        price.textContent = data.price;
+
+        var strikedpr = document.createElement("p");
+        strikedpr.textContent = data.strikedoffprice;
+
+
+        div3.append(price, strikedpr)
+
+        div4.append(quanty)
+
+        div2.append(name)
+
+        div1.append(image);
+
+        div.append(div1, div2, div4, div3)
+
+        document.querySelector("#product-container").append(div)
+    })
+    function deleteTask(index) {
+
+        prodData.splice(index, 1)
+        localStorage.setItem("cartitems", JSON.stringify(prodData))
+
+    }
+</script>
